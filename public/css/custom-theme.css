@@ -1,0 +1,184 @@
+/* public/css/custom-theme.css */
+
+/* --- Variabel Warna --- */
+:root {
+    --bg-color: #121212; /* Latar belakang sangat gelap */
+    --card-bg: #1e1e1e; /* Latar belakang elemen (kartu/tabel) */
+    --text-color: #f0f0f0; /* Teks terang */
+    --primary-color: #c042ff; /* Ungu Neon */
+    --secondary-color: #ff3366; /* Merah Muda Neon */
+    --accent-color: #00e5ff; /* Biru Neon */
+    --button-hover-color: #e0e0e0;
+    --border-color: #333;
+}
+
+/* --- Gaya Umum (Body) --- */
+.dark-theme {
+    font-family: 'Poppins', sans-serif;
+    /* --- Penambahan untuk Wallpaper --- */
+    background-image: url('https://wallpaperaccess.com/full/6515026.jpg');
+    background-size: cover;      /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memusatkan gambar */
+    background-attachment: fixed; /* Membuat gambar tetap saat discroll */
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
+    /* --- Fallback untuk warna jika gambar tidak termuat --- */
+    background-color: var(--bg-color);
+
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* --- Container Utama --- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* --- Judul (h1) --- */
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(192, 66, 255, 0.5); /* Efek glow */
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Tombol (a, button) --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-danger {
+    background-color: #ff5555;
+    color: var(--text-color);
+    border: 2px solid #ff5555;
+}
+
+.btn-warning {
+    background-color: #ff9900;
+    color: var(--bg-color);
+    border: 2px solid #ff9900;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+}
+
+/* --- Tabel --- */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Penting untuk border-radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.table-custom th,
+.table-custom td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom th {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-custom tr:last-child td {
+    border-bottom: none;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* --- Form --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(192, 66, 255, 0.5);
+}
+
+/* --- Card/Box --- */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-text strong {
+    color: var(--accent-color);
+}
+
+/* --- Flash Message (Success) --- */
+.alert-success {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
